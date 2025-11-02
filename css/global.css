@@ -1,0 +1,217 @@
+/* Typography */
+body {
+    font-family: var(--primary-font), sans-serif;
+    font-size: var(--fs-body);
+    font-weight: var(--fw-body);
+}
+
+/* Global */
+.container {
+    max-width: 80%;
+}
+
+/* Heading with Hamburger menu */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 5px 15px var(--bg-shadow);
+    padding: 0 12%;
+    background-color: var(--bg-heading);
+    position: sticky;
+    z-index: 9999;
+    top: 0;
+}
+
+.logo {
+    width: var(--size-800);
+}
+
+.primary-navigation ul {
+    /* !!! */
+    list-style: none;
+    display: flex;
+}
+
+.primary-navigation ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* add on */
+.primary-navigation a {
+    display: flex;
+    text-decoration: none;
+    color: var(--nav-text-color);
+    padding: var(--size-200) var(--size-300);
+    transition: all 300ms ease;
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-primary-navigation);
+}
+
+.primary-navigation a.active-link,
+.primary-navigation a:hover {
+    color: var(--nav-hover-color);
+}
+
+.primary-navigation a.active-link::after,
+.primary-navigation a:hover::after {
+    content: '';
+    width: 30%;
+    height: 2px;
+    background-color: var(--nav-hover-color);
+    position: absolute;
+    bottom: 10px;
+    left: 20x;
+}
+
+/* .primary-navigation a.accent-link{
+    background-color: ;
+} + bottom for active*/
+#open-sidebar-button {
+    display: none;
+    background: none;
+    border: none;
+    padding: var(--size-200);
+    margin-left: auto;
+    cursor: pointer;
+}
+
+#close-sidebar-button {
+    display: none;
+    background: none;
+    border: none;
+    padding: var(--size-200);
+    cursor: pointer;
+}
+
+#open-sidebar-button i {
+    font-size: var(--size-300);
+}
+
+#overlay {
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    inset: 0;
+    z-index: 9;
+    display: none;
+}
+
+.skip-link {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: var(--size-200);
+    left: var(--size-200);
+    z-index: 1000;
+    /* background-color: var(accent); */
+    /* color: #fff; */
+    padding: var(--size-200) var(--size-300);
+    border-radius: .3125rem;
+    text-decoration: none;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-body);
+    transition: opacity .3s ease;
+}
+
+.skip-link:focus {
+    opacity: 1;
+    pointer-events: auto;
+    outline: .1875rem solid #fff;
+}
+
+@media screen and (max-width: 65rem) {
+    .header {
+        padding: 0 2%;
+    }
+}
+
+@media screen and (max-width: 53rem) {
+    .primary-navigation a {
+        padding: var(--size-200) var(--size-200);
+    }
+}
+
+@media screen and (max-width: 46rem) {
+    .header {
+        padding: var(--size-200) 12%;
+    }
+
+    .primary-navigation {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: min(20rem, 100%);
+        z-index: 10;
+        border-left: 3px solid var(--nav-hover-color);
+        transition: right 300ms ease-out;
+        background-color: aqua;
+        /* */
+    }
+
+    .primary-navigation.show {
+        right: 0;
+    }
+
+    .primary-navigation.show~#overlay {
+        display: block;
+    }
+
+    .primary-navigation ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .primary-navigation a {
+        width: 100%;
+        padding-left: var(--size-500);
+    }
+
+    #open-sidebar-button,
+    #close-sidebar-button {
+        display: block;
+    }
+}
+
+/* .primary-navigation a::after,
+.primary-navigation a.active::after {
+    content: "";
+    position: absolute;
+    background-color: #7d7465;
+    height: 10px;
+    left: var(--size-200);
+    right: var(--size-200);
+} */
+
+/* Hidden elements(A11Y) */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    border: 0;
+}
+
+.button {
+    background-color: #fff;
+    font-weight: var(--fw-bold);
+    color: #000;
+    padding: var(--size-200) var(--size-500);
+    border-radius: 4px;
+    box-shadow: 0px 5px 15px var(--bg-heading);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 300ms ease;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 30px var(--bg-heading);
+}

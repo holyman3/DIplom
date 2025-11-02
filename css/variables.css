@@ -1,0 +1,81 @@
+:root {
+    /* Coloring */
+    --nav-text-color: rgb(73, 73, 73);
+    --nav-hover-text-color: rgb(255, 255, 255);
+    --nav-hover-color: rgb(11, 181, 187);
+    /* --nav-accent-color: rgb(102, 9, 102); */
+    --bg-heading: rgb(228, 228, 228);
+    --bg-shadow: rgb(197, 197, 197);
+    --shop-button-color: rgb(59, 58, 58);
+
+    /* Sizing */
+    --size-900: 10rem;
+    --size-800: 7.5rem;
+    --size-700: 6rem;
+    --size-600: 4.5rem;
+    --size-500: 3rem;
+    --size-400: 2rem;
+    --size-300: 1.5rem;
+    --size-250: 1.25rem;
+    --size-200: 1rem;
+    --size-150: .75rem;
+    --size-125: .625rem;
+    --size-100: .5rem;
+
+    
+    /* Font-family */
+    --primary-font: "Roboto";
+
+
+    /* Font-sizing */
+    --fs-xs: var(--size-125);
+    --fs-s: var(--size-150);
+    --fs-body: var(--size-200);
+    --fs-l: var(--size-300);
+    --fs-primary-navigation: var(--size-300);
+    --fs-big-heading: var(--size-600);
+    --fs-regular-heading: var(--size-500);
+    --fs-small-heading: var(--size-400);
+    --fs-xs-heading: var(--size-300);
+    --fs-bigger-text: var(--size-250);
+
+
+    /* Font-Weights */
+    --fw-body: 500;
+    --fw-light: 300;
+    --fw-thinner: 400;
+    --fw-regular: 500;
+    --fw-bold: 800;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Hamburger menu */

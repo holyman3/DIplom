@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <a href="#main" class="skip-link">Skip to main content</a>
+        <a href="index.html"><img src="images/logo.png" alt="logo" class="logo"></a>
+
+        <button id="open-sidebar-button" aria-label="open sidebar" aria-expanded="false" aria-colspan="navbar">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="primary-navigation" id="primary-navigation" aria-label="primary menu">
+            <ul>
+                <li><button id="close-sidebar-button" aria-label="close sidebar"><i
+                            class="fa-solid fa-xmark"></i></button></li>
+                <li><a href="index.html" class="active-link" aria-current="page">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="accent-link">Login</a></li>
+                <li><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+            </ul>
+        </nav>
+
+        <div id="overlay" aria-hidden="true"></div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h3>Trade-in-offer</h3>
+            <h1>
+                Super value deals<br>
+                <span>On all products</span>
+            </h1>
+            <p>Save more with coupons & up to 70% off! </p>
+            <a href="shop.html" class="btn">Shop Now</a>
+        </section>
+
+        <section id="categories" aria-labelledby="categories-title">
+            <h2 id="categories-title">Shop by Categroy</h2>
+            <div class="flex-container">
+                <article class="category">
+                    <a href="shop.html">
+                        <img src="images/categories/accessories.jpg" alt="Accessories" id="accessories-category-img">
+                        <h3 id="accessories-category">Accessories</h3>
+                    </a>
+                </article>
+                <article class="category">
+                    <a href="shop.html">
+                        <img src="images/categories/dresses.jpg" alt="Dresses" id="dresses-category-img">
+                        <h3 id="dresses-category">Dresses</h3>
+                    </a>
+                </article>
+                <article class="category">
+                    <a href="shop.html">
+                        <img src="images/categories/men's.jpg" alt="Men's" id="men's-category-img">
+                        <h3 id="men's-category">Men's</h3>
+                    </a>
+                </article>
+                <article class="category">
+                    <a href="shop.html">
+                        <img src="images/categories/outerwear.jpg" alt="Outerwear" id="outerwear-category-img">
+                        <h3 id="outerwear-category">Outerwear</h3>
+                    </a>
+                </article>
+                <article class="category">
+                    <a href="shop.html">
+                        <img src="images/categories/shoes.jpg" alt="Shoes" id="shoes-category-img">
+                        <h3 id="shoes-category">Shoes</h3>
+                    </a>
+                </article>
+                <article class="category">
+                    <a href="shop.html">
+                        <img src="images/categories/sweaters and cardigans.jpg" alt="Sweaters and Cardigans"
+                            id="sweaters-and-cardigans-category-img">
+                        <h3 id="sweaters-and-cardigans-category">Sweaters and Cardigans</h3>
+                    </a>
+                </article>
+                <article class="category">
+                    <a href="shop.html">
+                        <img src="images/categories/t-shirts.jpg" alt="T-shirts" id="t-shirts-category-img">
+                        <h3 id="t-shirts-category">T-shirts</h3>
+                    </a>
+                </article>
+                <article class="category">
+                    <a href="shop.html">
+                        <img src="images/categories/women's.jpg" alt="Women's" id="women's-category-img">
+                        <h3 id="women's-category">Women's</h3>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <section id="new-collection">
+            <a href="shop.html"><img src="images/new collection.jpg" alt=""></a>
+            <p>NEW</p>
+            <h2>New Natur(e)al Collection</h2>
+            <div class="flex-container">
+                <article class="category">
+                    <a href="shop.html" aria-labelledby="item-title-1">
+                        <img src="images/products/1.jpg" alt="Red oversized hoodie">
+                        <p class="product-brand">
+                            <span class="visually-hidden">Brand:</span> Adidas
+                        </p>
+                        <h3 id="item-title-1">Red oversized hoodie</h3>
+                        <div class="rating" role="img" aria-label="3 out of 5 stars">
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star-half-stroke" aria-hidden="true"></i>
+                            <i class="fa-regular fa-star" aria-hidden="true"></i>
+                        </div>
+                        <p class="product-price" aria-label="Price 49 dollars">$49</p>
+                    </a>
+                    <button aria-label="Add the item Red oversized hoodie to your wishlist"><i
+                            class="fa-regular fa-heart"></i></button>
+                </article>
+                <article class="category" aria-labelledby="item-title-2">
+                    <a href="shop.html" class="product-link">
+                        <img src="images/products/2.jpg" alt="Black durable boots">
+                        <p class="product-brand">
+                            <span class="visually-hidden">Brand:</span> Timberland
+                        </p>
+                        <h3 id="item-title-2">Black durable boots</h3>
+                        <div class="rating" role="img" aria-label="3 out of 5 stars">
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star-half-stroke" aria-hidden="true"></i>
+                            <i class="fa-regular fa-star" aria-hidden="true"></i>
+                        </div>
+                        <p class="product-price" aria-label="Price 79 dollars">$79</p>
+                    </a>
+                    <button aria-label="Add the item Black durable boots to your wishlist"><i
+                            class="fa-regular fa-heart" aria-hiden="true"></i></button>
+                </article>
+                <article class="category" aria-labelledby="item-title-3">
+                    <a href="shop.html" class="product-link">
+                        <img src="images/products/3.jpg" alt="Blue cotton hat">
+                        <p class="product-brand">
+                            <span class="visually-hidden">Brand:</span> Zara
+                        </p>
+                        <h3 id="item-title-3">Blue cotton hat</h3>
+                        <div class="rating" role="img" aria-label="3 out of 5 stars">
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star-half-stroke" aria-hidden="true"></i>
+                            <i class="fa-regular fa-star" aria-hidden="true"></i>
+                        </div>
+                        <p class="product-price" aria-label="Price 19 dollars">$19</p>
+                    </a>
+                    <button aria-label="Add the item Blue cotton hat to your wishlist"><i
+                            class="fa-regular fa-heart"></i></button>
+                </article>
+                <article class="category" aria-labelledby="item-title-4">
+                    <a href="shop.html" class="product-link">
+                        <img src="images/products/4.jpg" alt="White and yellow banana shirt">
+                        <p class="product-brand">
+                            <span class="visually-hidden">Brand:</span> Louis Vuitton
+                        </p>
+                        <h3 id="item-title-4">White and yellow banana shirt</h3>
+                        <div class="rating" role="img" aria-label="3 out of 5 stars">
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star-half-stroke" aria-hidden="true"></i>
+                            <i class="fa-regular fa-star" aria-hidden="true"></i>
+                        </div>
+                        <p class="product-price" aria-label="Price 49 dollars">$49</p>
+                    </a>
+                    <button aria-label="Add the item White and yellow banana shirt to your wishlist"><i
+                            class="fa-regular fa-heart"></i></button>
+                </article>
+            </div>
+        </section>
+
+        <section id="banner">
+            <h3>Summer Shinetime</h3>
+            <h2>Up to <span>70% Off</span> - All Bags & Accessories</h2>
+            <button class="button">Explore More</button>
+        </section>
+
+        <section class="collection-slides" aria-label="Categories for everyone">
+            <div class="carousel" data-carousel>
+                <button class="carousel-button prev" data-carousel-button="prev"><i class="fa-solid fa-arrow-left"></i></button>
+                <button class="carousel-button next" data-carousel-button="next"><i class="fa-solid fa-arrow-right"></i></button>
+                <ul data-slides>
+                    <li class="slide" data-active><a href="shop.html"><img src="images/categories/WINTER.jpg"
+                                alt="New WINTER clothing"></a></li>
+                    <li class="slide"><a href="shop.html"><img src="images/categories/JENNY.jpg"
+                                alt="New DENIM clothing"></a></li>
+                    <li class="slide"><a href="shop.html"><img src="images/categories/YNG.jpg"
+                                alt="New YNG-styled clothing"></a></li>
+                </ul>
+            </div>
+        </section>
+
+
+    </main>
+
+
+    <script src="js/main.js" defer></script>
+    <script src="js/home.js" defer></script>
+</body>
+
+</html>
