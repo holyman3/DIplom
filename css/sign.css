@@ -6,20 +6,20 @@ body {
 html, body {
   overflow-x: hidden;
 }
-#login-div{
+#sign-div{
     /* border: 1px solid black; */
     /* justify-content: center;
     align-items: center; */
     margin: auto;
-    margin-top: 150px;
+    margin-top: 100px;
     border-radius: 20px;
     box-shadow: 5px 5px 15px gray;
     background-color: var(--bg-heading);
     width: 800px;
-    height: 300px;
+    height: 450px;
     display: flex;
 }
-#h1-login{
+#h1-sign{
     text-align: left;
     color: var(--nav-text-color);
     margin-left: 50px;
@@ -28,7 +28,7 @@ p{
     margin-left: 50px;
     color: var(--nav-text-color);
 }
-.login-inputs{
+.sign-inputs{
     margin-left: 100px;
     margin-top: 50px;
     justify-items: center;
@@ -69,6 +69,16 @@ p{
   transition: 0.3s ease;
 }
 
+.email-input input:focus + label,
+.email-input input:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 15px;
+  font-size: 14px;
+  color: gray;
+  background: var(--bg-heading);
+  padding: 0 5px;
+}
+
 .input-box input:focus + label,
 .input-box input:valid + label {
   top: -10px;
@@ -79,7 +89,9 @@ p{
   padding: 0 5px;
 }
 
-.login-inputs {
+
+
+.sign-inputs {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -103,7 +115,7 @@ p{
     transform: scale(1.05);
     box-shadow: 0px 5px 30px var(--bg-heading);
 }
-#sign-up-a{
+#log-in-a{
     text-decoration: none;
     display: flex;
     justify-content: center;
