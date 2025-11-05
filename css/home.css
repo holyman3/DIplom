@@ -30,7 +30,7 @@
     }
 }
 
-#hero h1 {
+#hero h2 {
     font-size: var(--fs-big-heading);
     line-height: 1.05;
     margin-bottom: var(--size-200);
