@@ -1,0 +1,42 @@
+#hero {
+    background-image: url('../images/shop-banner.jpg');
+    height: 40vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--size-200) 12%;
+    font-size: var(--fs-bigger-text);
+    color: #fff;
+}
+
+#hero h2 {
+    font-size: var(--fs-small-heading);
+}
+
+.pagination ul {
+    list-style: none;
+    margin: var(--size-300) 0 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination ul li {
+    margin: var(--size-50);
+}
+
+.pagination ul li a {
+    text-decoration: none;
+    color: var(--nav-text-color);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-l);
+    padding: var(--size-100) var(--size-200);
+    background-color: var(--nav-hover-color);
+    color: white;
+    border-radius: 4px;
+}

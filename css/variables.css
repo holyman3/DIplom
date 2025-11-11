@@ -13,7 +13,9 @@
     --size-800: 7.5rem;
     --size-700: 6rem;
     --size-600: 4.5rem;
+    --size-550: 3.75rem;
     --size-500: 3rem;
+    --size-450: 2.5rem;
     --size-400: 2rem;
     --size-300: 1.5rem;
     --size-250: 1.25rem;
@@ -21,6 +23,7 @@
     --size-150: .75rem;
     --size-125: .625rem;
     --size-100: .5rem;
+    --size-50: .25rem;
 
     
     /* Font-family */
@@ -32,6 +35,7 @@
     --fs-s: var(--size-150);
     --fs-body: var(--size-200);
     --fs-l: var(--size-300);
+    --fs-xl: var(--size-400);
     --fs-primary-navigation: var(--size-300);
     --fs-big-heading: var(--size-600);
     --fs-regular-heading: var(--size-500);
