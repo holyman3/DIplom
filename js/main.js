@@ -1,37 +1,41 @@
-const buttons = document.querySelectorAll('[data-carousel-button]');
-buttons.forEach(button => {
-    button.addEventListener('click', () => {
-        stopCarousel();//mine
-        const offset = button.dataset.carouselButton === 'next' ? 1 : -1;
-        const slides = button
-            .closest('[data-carousel]')
-            .querySelector('[data-slides]');
+const menuOpen = document.getElementById('open-sidebar-button');
+const menuClose = document.getElementById('close-sidebar-button');
+const primaryNav = document.getElementById('primary-navigation');
+const overlay = document.getElementById('overlay');
 
-        const activeSlide = slides.querySelector('[data-active]');
-        let newIndex = [...slides.children].indexOf(activeSlide) + offset;
-        if(newIndex < 0) newIndex = slides.children.length - 1;
-        if(newIndex >= slides.children.length) newIndex = 0;
+const media = window.matchMedia('(width < 43.75rem');
 
-        slides.children[newIndex].dataset.active = true;
-        delete activeSlide.dataset.active;
-        startCarousel();//mine
+media.addEventListener('change', (e) => updateNavbar(e));
+
+function updateNavbar(e) {
+    const isMobile = e.matches;
+    if(isMobile) {
+        primaryNav.setAttribute('inert', '');
+    } else {
+        primaryNav.removeAttribute('inert');
+    }
+}
+
+function closeSidebar() {
+    primaryNav.classList.remove('show');
+    menuOpen.setAttribute('aria-epanded', 'false');
+    primaryNav.setAttribute('inert', '');
+}
+
+menuOpen.addEventListener('click', () => {
+    primaryNav.classList.add('show');
+    menuOpen.setAttribute('aria-epanded', 'true');
+    primaryNav.removeAttribute('inert');
+});
+menuClose.addEventListener('click', closeSidebar);
+overlay.addEventListener('click', closeSidebar);
+
+updateNavbar(media);
+
+// Some extras, for in-page navlinks
+const primaryNavLinks = document.querySelectorAll('primary-navigation a');
+primaryNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        closeSidebar();
     })
 });
-
-const carousel = document.querySelector('[data-carousel]');
-const slides = carousel.querySelector('[data-slides]');
-let intervalId;
-function startCarousel() {
-    intervalId = setInterval(() => {
-        const activeSlide = slides.querySelector('[data-active]');
-        let newIndex = [...slides.children].indexOf(activeSlide) + 1;
-        if (newIndex >= slides.children.length) newIndex = 0;
-
-        slides.children[newIndex].dataset.active = true;
-        delete activeSlide.dataset.active;
-    }, 10000);
-}
-function stopCarousel() {
-    clearInterval(intervalId);
-}
-startCarousel();
